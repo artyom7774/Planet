@@ -1,0 +1,41 @@
+[
+    {
+        "name": "health_add_1",
+        "image": "health_add_1",
+        "cost": 200,
+        "on": 1,
+        "get": {
+            "add": "health_add_1"
+        }
+    },
+
+    {
+        "name": "health_add_3",
+        "image": "health_add_3",
+        "cost": 500,
+        "on": 1,
+        "get": {
+            "add": "health_add_3"
+        }
+    },
+
+    {
+        "name": "gun_1",
+        "image": "gun_1",
+        "cost": 500,
+        "on": 1,
+        "get": {
+            "add": "gun_1"
+        }
+    },
+
+    {
+        "name": "tnt",
+        "image": "tnt",
+        "cost": 1000,
+        "on": 1,
+        "get": {
+            "add": "tnt"
+        }
+    }
+]

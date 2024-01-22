@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "cost": [1, "silver"],
+        "dependencies": [],
+        "image": null,
+        "radius": 20,
+
+        "x": 300,
+        "y": 200
+    },
+
+    {
+        "id": 2,
+        "cost": [2, "silver"],
+        "dependencies": [],
+        "image": null,
+        "radius": 30,
+
+        "x": 400,
+        "y": 200
+    }
+]
