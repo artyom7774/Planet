@@ -42,7 +42,7 @@ class Stats:
 
 
 class Game:
-    version = "1.1.2 release"
+    version = "1.1.3 release"
 
     def __init__(self):
         pygame.init()
