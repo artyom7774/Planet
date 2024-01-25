@@ -1,8 +1,8 @@
 {
     "game_background": "auto",
     "font": "lucida",
-    "lang": "RU",
+    "lang": "EN",
     "particles": "OFF",
     "display_fps": "OFF",
-    "fps": "ON"
+    "fps": "OFF"
 }

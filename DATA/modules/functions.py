@@ -434,7 +434,7 @@ class Functions:
 
     @classmethod
     def func_help_listen(cls, game):
-        game.sound.sound(game.cash["help"][LANG.lower()][abs(game.menu_help_buttons["path"]) % 4], f"help_{game.menu_help_buttons['path']}")
+        game.sound.sound(game.cash["help"][LANG.lower()][abs(game.menu_help_buttons["path"]) % 4], f"help_{game.menu_help_buttons['path'] % 4}")
 
     @classmethod
     def func_help_fill(cls, game):
@@ -669,7 +669,7 @@ class Functions:
                 "lang": "EN",
                 "particles": "ON",
                 "display_fps": "OFF",
-                "fps": 60
+                "fps": "OFF"
             }
 
     #

@@ -42,7 +42,7 @@ class Stats:
 
 
 class Game:
-    version = "1.1.3 release"
+    version = "1.1.2 release"
 
     def __init__(self):
         pygame.init()
@@ -97,7 +97,7 @@ class Game:
 
         self.debug = {
             "fps": False,
-            "full_vision": False,
+            "full_vision": True,
             "draw_map": True,
             "cells": True,
             "particles": True if self.settings["particles"] == "ON" else False,
