@@ -347,18 +347,28 @@ class Functions:
         game.menu = "history"
 
     @classmethod
-    def func_menu_upgrade(cls, game):
+    def func_menu_quiz(cls, game):
         cls.func_menu_back_append(game)
 
-        game.menu_upgrade_buttons["upgrade"][0].init()
+        # game.menu_upgrade_buttons["upgrade"][0].init()
 
-        game.menu = "upgrade"
+        game.menu = "quiz"
 
     @classmethod
     def func_menu_help(cls, game):
         cls.func_menu_back_append(game)
 
         game.menu = "menu_help"
+
+    @classmethod
+    def func_menu_quiz_start(cls, game):
+        cls.func_menu_back_append(game)
+
+        game.menu_quiz_start_buttons["quiz"][0].init()
+
+        game.menu = "quiz_start"
+
+        game.menu_back_button.draw()
 
     @classmethod
     def func_menu_settings(cls, game):

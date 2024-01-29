@@ -96,7 +96,7 @@ def init(game):
                 /n - Если закончились сердечки, то персонаж выбывает из игры. Его инвентарь будет разбросан по всей карте.
             """,
             """
-                /t В будущем (про Магазин).
+                /t В Магазине возможно приобрести временные бонусы на старт игры. Также можно накопить монетки,пройдя Викторину.
             """
         ],
 
@@ -126,7 +126,7 @@ def init(game):
                 /n - If the hearts run out, the character is eliminated from the game. His inventory will be scattered all over the map.
             """,
             """
-                /t In the future (about the Store).
+                /t In the store you can get temporary bonuses at the start of the game. You can also save coins by passing the Quiz.
             """
         ]
     }

@@ -2,6 +2,7 @@ from DATA.modules.base.text_field import TextField
 from DATA.modules.base.text_box import TextBox
 from DATA.modules.base.button import Button
 
+from DATA.modules.base.quiz import Quiz
 from DATA.modules.base.upgrade_map import UpgradeMap
 from DATA.modules.base.shop import Shop
 
@@ -42,7 +43,7 @@ class Stats:
 
 
 class Game:
-    version = "1.1.2 release"
+    version = "1.2.0 release"
 
     def __init__(self):
         pygame.init()
@@ -535,8 +536,8 @@ class Game:
                 ),
 
                 Button(
-                    self, 400, 300, 200, 100, [], None, button_color,
-                    text_box=TextBox(self, 550, 300, 200, 100, translate.translate("Upgrades"), font_size=30, font_color=font_color)
+                    self, 400, 300, 200, 100, [], lambda: Functions.func_menu_quiz(self), button_color,
+                    text_box=TextBox(self, 550, 300, 200, 100, translate.translate("Quiz"), font_size=30, font_color=font_color)
                 ),
 
                 Button(
@@ -546,16 +547,34 @@ class Game:
             ]
         }
 
-        self.menu_upgrade_buttons = {
+        self.menu_quiz_buttons = {
             "text": [
                 TextBox(
-                    self, 250, 0, 500, 100, translate.translate("Upgrades"),
+                    self, 250, 0, 500, 100, translate.translate("Quiz"),
                     font_size=70, font_type="DATA/files/fonts/magnolia.ttf", font_color=font_color
                 )
             ],
 
-            "upgrade": [
-                UpgradeMap(self, self.cash["upgrades"])
+            "buttons": [
+                Button(
+                    self, 350, 250, 300, 100, [], lambda: Functions.func_menu_quiz_start(self), button_color,
+                    text_box=TextBox(self, 350, 250, 300, 100, translate.translate("Start"), font_size=30, font_color=font_color)
+                )
+            ]
+        }
+
+        self.menu_quiz_start_buttons = {
+            "quiz": [
+                Quiz(self)
+            ]
+        }
+
+        self.menu_quiz_end_buttons = {
+            "text": [
+                TextBox(
+                    self, 250, 0, 500, 100, translate.translate("Quiz"),
+                    font_size=70, font_type="DATA/files/fonts/magnolia.ttf", font_color=font_color
+                )
             ]
         }
 

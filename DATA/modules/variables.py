@@ -15,6 +15,8 @@ NAME = translate.translate("Planet")
 BASE_FONT = f"DATA/files/fonts/{var['font']}.ttf"
 FPS = 60
 
+GET_MONEY_QUIZ = 50
+
 if var["fps"] == "ON":
     SYSTEM_WIDTH = windll.user32.GetSystemMetrics(0)
     SYSTEM_HEIGHT = windll.user32.GetSystemMetrics(1)

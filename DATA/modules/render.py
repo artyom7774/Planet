@@ -162,17 +162,34 @@ class Render:
 
         self.game.menu_back_button.draw()
 
-    def upgrade(self):
+    def quiz(self):
         self.draw_background()
 
-        for text in self.game.menu_upgrade_buttons["text"]:
+        for button in self.game.menu_quiz_buttons["buttons"]:
+            button.draw()
+
+        for text in self.game.menu_quiz_buttons["text"]:
             text.draw()
 
-        for upgrade in self.game.menu_upgrade_buttons["upgrade"]:
-            upgrade.draw()
+        self.game.menu_back_button.draw()
 
-        if self.game.debug["debug_rect"]:
-            pygame.draw.rect(self.game.screen, (255, 0, 0), (200, 100, 600, 500), 1)
+    def quiz_start(self):
+        self.draw_background()
+
+        for quiz in self.game.menu_quiz_start_buttons["quiz"]:
+            quiz.draw()
+
+    def quiz_end(self):
+        self.draw_background()
+
+        for text in self.game.menu_quiz_end_buttons["text"]:
+            text.draw()
+
+        TextBox(
+            self.game, 250, 100, 500, 50,
+            translate.translate("Your get: ") + str(round(sum(self.game.menu_quiz_start_buttons["quiz"][0].get))),
+            font_color=self.game.cash["menues"][self.game.couple]["font_color"]
+        ).draw()
 
         self.game.menu_back_button.draw()
 
