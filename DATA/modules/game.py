@@ -98,7 +98,7 @@ class Game:
 
         self.debug = {
             "fps": False,
-            "full_vision": True,
+            "full_vision": False,
             "draw_map": True,
             "cells": True,
             "particles": True if self.settings["particles"] == "ON" else False,

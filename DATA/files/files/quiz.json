@@ -628,7 +628,7 @@
         "question": "В 2024 году летние Олимпийские игры пройдут в",
         "answers": [
             {
-                "answer": true,
+                "answer": false,
                 "text": "Токио"
             },
             {
@@ -640,7 +640,7 @@
                 "text": "Сочи"
             },
             {
-                "answer": false,
+                "answer": true,
                 "text": "Париж"
             }
         ],
@@ -827,29 +827,6 @@
             {
                 "answer": false,
                 "text": "Сед ноги врозь"
-            }
-        ],
-        "time": 30
-    },
-	"231": {
-        "name": "231",
-        "question": "Какого вида нарушения в баскетболе не существует?",
-        "answers": [
-            {
-                "answer": true,
-                "text": "Пробежка"
-            },
-            {
-                "answer": false,
-                "text": "Фол"
-            },
-            {
-                "answer": false,
-                "text": "Правило 8 сек"
-            },
-            {
-                "answer": false,
-                "text": "Проброс"
             }
         ],
         "time": 30
