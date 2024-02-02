@@ -1,14 +1,8 @@
 {
-    "money": 258,
+    "money": 306,
     "best_moves": 122,
-    "time_in_game": 1711424.895090546,
-    "upgrades": [
-        {
-            "name": "health_add_1",
-            "add": "health_add_1",
-            "count": 0
-        }
-    ],
+    "time_in_game": 1719529.5990960589,
+    "upgrades": [],
     "skills": [],
     "game_stats": [
         {
