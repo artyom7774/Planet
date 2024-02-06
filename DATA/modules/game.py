@@ -43,7 +43,7 @@ class Stats:
 
 
 class Game:
-    version = "1.2.0 release"
+    version = "1.3.0 release"
 
     def __init__(self):
         pygame.init()
@@ -557,8 +557,13 @@ class Game:
 
             "buttons": [
                 Button(
-                    self, 350, 250, 300, 100, [], lambda: Functions.func_menu_quiz_start(self), button_color,
+                    self, 350, 200, 300, 100, [], lambda: Functions.func_menu_quiz_start(self), button_color,
                     text_box=TextBox(self, 350, 250, 300, 100, translate.translate("Start"), font_size=30, font_color=font_color)
+                ),
+
+                Button(
+                    self, 350, 350, 300, 100, [], lambda: Functions.func_menu_quiz_update(self), button_color,
+                    text_box=TextBox(self, 350, 250, 300, 100, translate.translate("Update"), font_size=30, font_color=font_color)
                 )
             ]
         }

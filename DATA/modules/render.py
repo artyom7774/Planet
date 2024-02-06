@@ -171,6 +171,13 @@ class Render:
         for text in self.game.menu_quiz_buttons["text"]:
             text.draw()
 
+        if self.game.cash["internet_error_text"] is not None:
+            self.game.cash["internet_error_text"]["text"].draw()
+            self.game.cash["internet_error_text"]["live"] -= 1
+
+            if self.game.cash["internet_error_text"]["live"] < 0:
+                self.game.cash["internet_error_text"] = None
+
         self.game.menu_back_button.draw()
 
     def quiz_start(self):

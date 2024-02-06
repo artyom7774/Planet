@@ -3,6 +3,8 @@ from DATA.files.files.difficulties.normal import normal_init
 from DATA.files.files.difficulties.hard import hard_init
 
 from DATA.modules.base.table import Table
+from DATA.modules.base.text_box import TextBox
+from DATA.modules.base.sound import Sound
 from DATA.modules.base.button import Button
 from DATA.modules.dice import Dice
 
@@ -11,6 +13,7 @@ from DATA.modules.variables import *
 from datetime import datetime
 from datetime import date
 
+import requests
 import pygame
 import random
 import json
@@ -717,3 +720,37 @@ class Functions:
             game.stats.upgrades.append(add)
 
         slot.init()
+
+    @classmethod
+    def download_file(cls, url, path):
+        local_filename = path
+        with requests.get(url, stream=True, allow_redirects=True) as r:
+            r.raise_for_status()
+            with open(local_filename, 'w') as f:
+                f.write(r.text)
+
+        with open(local_filename, "r") as file:
+            var = json.load(file)
+
+        return var
+
+    @classmethod
+    def func_menu_quiz_update(cls, game):
+        if Sound.internet():
+            var = cls.download_file("https://github.com/artyom7774/Planet/blob/main/DATA/files/files/quiz.json", "DATA/files/cash/quiz.json")
+
+            var = json.loads("\n".join(var["payload"]["blob"]["rawLines"]))
+
+            with open("DATA/files/files/quiz.json", "w") as file:
+                file.write(json.dumps(var, indent=4))
+
+            game.cash["internet_error_text"] = {
+                "live": 300,
+                "text": TextBox(game, 0, HEIGHT - 100, WIDTH, 100, "Complited!", 30, font_color=(225, 30, 30))
+            }
+
+        else:
+            game.cash["internet_error_text"] = {
+                "live": 300,
+                "text": TextBox(game, 0, HEIGHT - 100, WIDTH, 100, "Internet Error!", 30, font_color=(225, 30, 30))
+            }

@@ -24,6 +24,8 @@ def init(game):
 
     game.cash["delete_save"] = False
 
+    game.cash["internet_error_text"] = None
+
     game.cash["dices"] = {
         "draw": False,
         "button": None,
